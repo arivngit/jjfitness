@@ -1,0 +1,45 @@
+<h2><%= I18n.t 'txt.menu.setup' %></h2>
+<div>
+  <h3><%= I18n.t 'txt.setup.freezing_edge_and_adding' %></h3>
+  <div>
+	<%= I18n.t 'txt.setup.you_need_to_be_on_edge' %>
+    <blockquote>
+      <pre>
+rails i18n_test
+rake rails:freeze:edge
+      </pre>
+    </blockquote>
+		<%= I18n.t 'txt.setup.date_time_formats', :localized_dates_link => link_to("plugin localized_dates", "http://github.com/clemens/localized_dates") %>
+    <blockquote>
+      <pre>
+./script/plugin install git://github.com/clemens/localized_dates.git
+      </pre>
+    </blockquote>
+  </div>
+
+  <h3>	<%= I18n.t 'txt.setup.config_locale' %></h3>
+  <div>
+    <p>	<%= I18n.t 'txt.setup.best_place' %></p>
+    <p>	<%= I18n.t 'txt.setup.locale' %></p>
+    <blockquote>
+      <pre>
+<%= show_locale_files %>	
+      </pre>
+    </blockquote>
+    <p><%= I18n.t 'txt.setup.defaults' %></p>
+    <blockquote>
+      <pre>
+I18n.default_locale = '<%= I18n.default_locale %>'
+I18n.locale         = '<%= I18n.locale %>'
+      </pre>
+    </blockquote>
+  </div>
+
+  <h3><%= I18n.t 'txt.setup.locale_structure_title' %></h3>
+  <div>
+    <p><%= I18n.t 'txt.setup.locale_structure_number' %></p>
+  	<p><%= I18n.t 'txt.setup.locale_structure_date_time' %></p>
+  </div>
+</div>
+
+<p style="text-align:right;"><%= link_to "&raquo; #{I18n.t('txt.menu.date_formats')}", :action => 'date_formats' %></p>

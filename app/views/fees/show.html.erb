@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Member:</b>
+  <%= @fee.member_id %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%= @fee.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%= @fee.to %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @fee.amount %>
+</p>
+
+<p>
+  <b>Advance:</b>
+  <%= @fee.advance %>
+</p>
+
+<p>
+  <b>Pending:</b>
+  <%= @fee.pending %>
+</p>
+
+<p>
+  <b>Proprietor:</b>
+  <%= @fee.proprietor %>
+</p>
+
+
+<%= link_to 'Edit', edit_fee_path(@fee) %> |
+<%= link_to 'Back', fees_path %>

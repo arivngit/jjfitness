@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Memership number:</b>
+  <%= @member.memership_number %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @member.name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @member.age %>
+</p>
+
+<p>
+  <b>Blood group:</b>
+  <%= @member.blood_group %>
+</p>
+
+<p>
+  <b>Profession:</b>
+  <%= @member.profession %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @member.address %>
+</p>
+
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>

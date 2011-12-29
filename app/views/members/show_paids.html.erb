@@ -1,0 +1,27 @@
+<h1> Fees paid this month:</h1>
+<ul>
+	<% 
+		@members.each do |member|
+	%>
+	<%=raw "<li>Name: #{member.name}, Membership Number: #{member.memership_number}, Paid Date: #{member.last_paid}</li>" %>
+	<%
+		end
+	%>
+</ul>
+
+
+<h1> This month new Admissions:</h1>
+<ul>
+	<% 
+		@new_members.each do |new_member|
+	%>
+	<% if new_member.fees.length > 0 %>
+	<%=raw "<li>Name: #{new_member.name}, Membership Number: #{new_member.memership_number}, Join Date: #{new_member.created_at.strftime("%d - %m - %Y")}, Paid: #{new_member.fees.first.advance + new_member.fees.first.amount}, Balance: #{new_member.fees.first.pending} </li>" %>
+	<% else %>
+	<%=raw "<li>Name: #{new_member.name}, Membership Number: #{new_member.memership_number}, Join Date: #{new_member.created_at.strftime("%d - %m - %Y")}, Paid: -nil-, Balance: -nil- </li>" %>
+	<% end %>
+	
+	<%
+		end
+	%>
+</ul>

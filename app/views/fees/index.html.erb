@@ -1,0 +1,35 @@
+<h1>Listing fees</h1>
+
+<table>
+  <tr>
+    <th>Member</th>
+    <th>From</th>
+    <th>To</th>
+    <th>Amount</th>
+    <th>Advance</th>
+    <th>Pending</th>
+    <th>Proprietor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fees.each do |fee| %>
+  <tr>
+    <td><%= fee.member_id %></td>
+    <td><%= fee.from %></td>
+    <td><%= fee.to %></td>
+    <td><%= fee.amount %></td>
+    <td><%= fee.advance %></td>
+    <td><%= fee.pending %></td>
+    <td><%= fee.proprietor %></td>
+    <td><%= link_to 'Show', fee %></td>
+    <td><%= link_to 'Edit', edit_fee_path(fee) %></td>
+    <td><%= link_to 'Destroy', fee, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fee', new_fee_path %>

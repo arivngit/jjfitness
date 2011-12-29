@@ -1,0 +1,61 @@
+<h2>DateHelper</h2>
+<div>
+  <h3><%= I18n.t 'txt.date_helper.date_time_title' %></h3>
+    <div>
+      <table>
+      <tr>
+        <th scope="row">time_ago_in_words(20.seconds.ago, true)</th>
+        <td><%= time_ago_in_words(20.seconds.ago, true) %></td>
+      </tr>
+      <tr>
+        <th scope="row">time_ago_in_words(1.minute.ago)</th>
+        <td><%= time_ago_in_words(1.minute.ago) %></td>
+      </tr>
+      <tr>
+        <th scope="row">time_ago_in_words(1.5.minute.ago)</th>
+        <td><%= time_ago_in_words(1.5.minute.ago) %></td>
+      </tr>
+      <tr>
+        <th scope="row">time_ago_in_words(1.day.ago)</th>
+        <td><%= time_ago_in_words(1.day.ago) %></td>
+      </tr>
+      <tr>
+        <th scope="row">time_ago_in_words(1.2.day.ago)</th>
+        <td><%= time_ago_in_words(1.2.day.ago) %></td>
+      </tr>
+    </table>
+    <p>etc.</p>
+  </div>
+
+  <h3><%= I18n.t 'txt.date_helper.forms_title' %></h3>
+  <div>
+    <table>
+      <tr>
+        <th scope="row">select_date(Date.today)</th>
+        <td><%= select_date(Date.today) %></td>
+      </tr>
+      <tr>
+        <th scope="row">select_time(Time.now)</th>
+        <td><%= select_time(Time.now) %></td>
+      </tr>
+      <tr>
+        <th scope="row">select_datetime(Time.now)</th>
+        <td><%= select_datetime(Time.now) %></td>
+      </tr>
+      <tr>
+        <th scope="row">date_select(Object.new, :date_field)</th>
+        <td><%= date_select(Object.new, :date_field) %></td>
+      </tr>
+      <tr>
+        <th scope="row">time_select(Object.new, :time_field)</th>
+        <td><%= time_select(Object.new, :time_field) %></td>
+      </tr>
+      <tr>
+        <th scope="row">datetime_select(Object.new, :date_or_time_field)</th>
+        <td><%= datetime_select(Object.new, :date_or_time_field) %></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<p style="text-align:right;"><%= link_to '&raquo; ActiveRecordHelper', :action => 'active_record_helper' %></p>

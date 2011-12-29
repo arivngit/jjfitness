@@ -1,0 +1,58 @@
+<% form_tag url_for(:action => "search_member"), :remote=>true do %>
+  <p>
+  	<%= label_tag :membership_number %><br />
+    <%= search_field_tag :membership_number %>
+    <%= submit_tag("Search", :disable_with=> "please wait...") %>
+  </p>
+<% end %>
+
+<%= form_for(@fee) do |f| %>
+  <% if @fee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fee.errors.count, "error") %> prohibited this fee from being saved:</h2>
+
+      <ul>
+      <% @fee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <%= f.hidden_field :member_id %>
+  
+  <div class="field">
+    <%= label_tag :member_name %><br />
+    <%= text_field_tag :member_name, "", :disabled => true %>
+    <%= label_tag "Last Paid" %>
+    <%= text_field_tag :last_paid, "", :disabled => true %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br />
+    <%= f.date_select :from,  :order => [:day, :month, :year] %>
+  </div>
+  <div class="field">
+    <%= f.label :to %><br />
+    
+    <%= f.date_select :to, :order => [:day, :month, :year], :default => 30.days.from_now %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :advance %><br />
+    <%= f.text_field :advance %>
+  </div>
+  <div class="field">
+    <%= f.label :pending %><br />
+    <%= f.text_field :pending %>
+  </div>
+  <div class="field">
+    <%= f.label :proprietor %><br />
+    <%= f.text_field :proprietor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,85 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+ta:
+  hello: "வணக்கம்"
+  tittle: "ஜெ ஜெ	 ஃபிட்னெஸ்"
+#If @post is a new record, it will use “Create Post” as submit button label, otherwise, it uses“Update Post”. You can customize those labels with I18n under the following keys:
+  helpers:
+    submit:
+      create: "உருவாக்கவும்  ஒரு #{model}"
+      update: "மாற்றங்களை உறுதிப்படுத்தவும்  #{model}"
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%e %b"
+      long: "%B %e, %Y"
+      only_day: "%e"
+
+    day_names: [ஞாயிற்றுக்கிழமை, திங்கட்கிழமை, செவ்வாய்க்கிழமை, புதன்கிழமை, வியாழக்கிழமை, வெள்ளிக்கிழமை, சனிக்கிழமை]
+    abbr_day_names: [ஞாயிறு, திங்கள், செவ்வாய், புதன், வியாழன், வெள்ளி, சனி]
+    month_names: [~, January, பிப்ரவரி, மார்ச், ஏப்ரல், கூடும், June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    order: [ :year, :month, :day ]
+  
+  time:
+    formats:
+      default: "%a %b %d %H:%M:%S %Z %Y"
+      time: "%H:%M"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+      only_second: "%S"
+      
+      datetime:
+        formats:
+          default: "%Y-%m-%dT%H:%M:%S%Z"
+          
+    am: 'am'
+    pm: 'pm'
+      
+  datetime:
+    distance_in_words:
+      half_a_minute: 'அரை நிமிடம்'
+      less_than_x_seconds:
+        zero: 'ஒரு வினாடிக்கும் குறைவான'
+        one: '1 நொடி'
+        other: '{{count}} விநாடிகள்'
+      x_seconds:
+        one: '1 விநாடிகள்'
+        other: '{{count}} விநாடிகள்'
+      less_than_x_minutes:
+        zero: 'ஒரு நிமிடத்துக்கு குறைவாக'
+        one: '1 நிமிஷம்'
+        other: '{{count}} நிமிடங்கள்'
+      x_minutes:
+        one: '1 நிமிடங்கள்'
+        other: '{{count}} நிமிடங்கள்'
+      about_x_hours:
+        one: 'about 1 மணி நேரம்'
+        other: '{{count}} மணி நேரம்'
+      x_days:
+        one: '1 நாள்'
+        other: '{{count}} நாட்கள்'
+      about_x_months:
+        one: 'about 1 month'
+        other: '{{count}} months'
+      x_months:
+        one: '1 month'
+        other: '{{count}} months'
+      about_x_years:
+        one: 'about 1 year'
+        other: '{{count}} years'
+      over_x_years:
+        one: 'over 1 year'
+        other: '{{count}} years'
+      
+  number:
+    format:
+      precision: 3
+      separator: '.'
+      delimiter: ','
+    currency:
+      format:
+        unit: '$'
+        precision: 2
+        format: '%u %n'
+ 

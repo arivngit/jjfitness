@@ -1,0 +1,20 @@
+
+document.ready = setValues();
+
+function setValues(){
+alert("<%= @member.class %>");
+	<% unless @member.nil? %>
+		document.getElementById("member_name").value = "<%= @member.name %>";
+		document.getElementById("fee_member_id").value = <%= @member.id %>;
+		<% if @member.last_paid.nil? %>
+		document.getElementById("last_paid").value = "";
+		<% else %>
+		document.getElementById("last_paid").value = "<%= @member.last_paid.strftime('%d %B %Y') %>";
+		<% end %>
+	<% else %>
+		document.getElementById("member_name").value = "";
+		document.getElementById("fee_member_id").value ="";
+		document.getElementById("last_paid").value = "";
+	<% end %>
+}
+
